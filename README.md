@@ -71,7 +71,7 @@ Para este Producto 1, hemos diseñado la interfaz siguiendo el sistema de rejill
 | ![Main Page](./MockUp Producto 1/MainPage.png) | ![Información](./MockUp Producto 1/Información de los jugadores.png) |
 
 > [!TIP]
-> Los archivos originales en alta resolución se encuentran en la carpeta `/docs`.
+> Los archivos originales en alta resolución se encuentran en la carpeta `/MockUp Producto 1`.
 
 ## 👥 Equipo: CODEA
 * **Integrantes:** [Alejandro Palomanes Gallego, David Vaz, Eloi Lopez, Oriol Ruiz]
