@@ -74,7 +74,7 @@ Para este Producto 1, hemos diseñado la interfaz siguiendo el sistema de rejill
 > Los archivos originales en alta resolución se encuentran en la carpeta `/docs`.
 
 ## 👥 Equipo: CODEA
-* **Integrantes:** [Añade vuestros nombres aquí]
-* **Asignatura:** Desarrollo de Aplicaciones Web (UOC)
+* **Integrantes:** [Alejandro Palomanes Gallego, David Vaz, Eloi Lopez, Oriol Ruiz]
+* **Asignatura:** Desarrollo de Front-End con frameworks avanzados en entornos moviles (UOC)
 
 
