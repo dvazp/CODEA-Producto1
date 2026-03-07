@@ -57,3 +57,24 @@ Angular CLI does not come with an end-to-end testing framework by default. You c
 ## Additional Resources
 
 For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+
+# 🏀 CODEA Basket Tech - Producto 1
+
+¡Bienvenidos al proyecto del equipo **CODEA**! Esta es una aplicación de gestión de plantillas de baloncesto desarrollada con **Angular** y **Bootstrap 5**.
+
+## 🎨 Diseño del Proyecto (Mockups)
+
+Para este Producto 1, hemos diseñado la interfaz siguiendo el sistema de rejilla de 12 columnas. Podéis ver los diseños a continuación:
+
+| Vista Principal (Listado y Filtros) | Vista de Detalle (BaskeTube) |
+| :---: | :---: |
+| ![Main Page](./MockUp Producto 1/MainPage.png) | ![Información](./MockUp Producto 1/Información de los jugadores.png) |
+
+> [!TIP]
+> Los archivos originales en alta resolución se encuentran en la carpeta `/docs`.
+
+## 👥 Equipo: CODEA
+* **Integrantes:** [Añade vuestros nombres aquí]
+* **Asignatura:** Desarrollo de Aplicaciones Web (UOC)
+
+
