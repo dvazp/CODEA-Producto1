@@ -1,0 +1,16 @@
+<main>
+    @if (player(); as p) {
+		<h2>{{ p.nombre }}</h2>
+		<p><strong>Equipo:</strong> {{ p.equipo }}</p>
+		<p><strong>Posición:</strong> {{ p.posicion }}</p>
+		<p><strong>Altura:</strong> {{ p.altura }}</p>
+		<p><strong>Edad:</strong> {{ p.edad }}</p>
+		<p><strong>Promedio puntos:</strong> {{ p.pPP }}</p>
+		<p><strong>Promedio rebotes:</strong> {{ p.rPP }}</p>
+		<p><strong>Promedio asistencias:</strong> {{ p.aPP }}</p>
+		<p><strong>% Tiros:</strong> {{ p.porcentajeTiros }}%</p>
+    }
+    @else {
+        <p>Jugador no encontrado.</p>
+    }
+</main>
