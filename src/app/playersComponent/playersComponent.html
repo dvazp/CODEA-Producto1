@@ -1,8 +1,7 @@
-<h1>Players</h1>
+<h1>Jugadores</h1>
 
 <ul>
 	<li *ngFor="let jugador of players">
-		<!-- routerLink will encode values for the URL; we pass the nombre as route param -->
 		<a [routerLink]="['/detail', jugador.nombre]">{{ jugador.nombre }} — {{ jugador.equipo }}</a>
 	</li>
 </ul>
