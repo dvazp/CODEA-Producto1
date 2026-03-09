@@ -1,0 +1,39 @@
+.navbar-general {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #F2F3F4;
+  padding: 10px;
+}
+
+.codea-logo {
+  color: #2C3E50;
+  text-underline-offset: 0.5rem;
+  transition: color 0.3s ease, text-underline-offset 0.3s ease;
+}
+
+.codea-logo:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.25rem;
+  color: #0099ff;
+}
+
+.navbar-nav {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  place-self: end;
+}
+
+.nav-item {
+  color: #2C3E50;
+  text-decoration: none;
+  font-weight: bold;
+  list-style-type: none;
+  transition: color 0.3s ease, text-underline-offset 0.3s ease;
+}
+
+.nav-item:hover {
+  color: #0099ff;
+  text-decoration: underline;
+}
