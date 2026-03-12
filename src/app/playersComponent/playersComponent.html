@@ -1,7 +1,11 @@
+<app-media></app-media>
+
+<hr />
+
 <h1>Jugadores</h1>
 
 <ul>
-	<li *ngFor="let jugador of players">
-		<a [routerLink]="['/detail', jugador.nombre]">{{ jugador.nombre }} — {{ jugador.equipo }}</a>
-	</li>
+	@for (jugador of players; track jugador.nombre) {
+		<li><a [routerLink]="['/detail', jugador.nombre]">{{ jugador.nombre }} — {{ jugador.equipo }}</a></li>
+	}
 </ul>
