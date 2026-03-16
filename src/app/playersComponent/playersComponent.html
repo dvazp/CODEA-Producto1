@@ -4,8 +4,32 @@
 
 <h1>Jugadores</h1>
 
-<ul>
-	@for (jugador of players; track jugador.nombre) {
-		<li><a [routerLink]="['/detail', jugador.nombre]">{{ jugador.nombre }} — {{ jugador.equipo }}</a></li>
-	}
-</ul>
+<div *ngIf="players.length > 0; else noPlayers" class="players-list">
+
+  <div
+    class="player-card"
+    *ngFor="let jugador of players"
+    (click)="selectPlayer(jugador)"
+    [class.selected]="selectedPlayer?.nombre === jugador.nombre"
+  >
+    <h3>{{ jugador.nombre }}</h3>
+
+    <p><strong>Equipo:</strong> {{ jugador.equipo }}</p>
+    <p><strong>Posición:</strong> {{ jugador.posicion }}</p>
+    <p><strong>Edad:</strong> {{ jugador.edad }}</p>
+    <p><strong>Altura:</strong> {{ jugador.altura }}</p>
+
+    <a
+      [routerLink]="['/detail', jugador.nombre]"
+      class="detail-button"
+      (click)="$event.stopPropagation()"
+    >
+      Ver detalle
+    </a>
+  </div>
+
+</div>
+
+<ng-template #noPlayers>
+  <p>No hay jugadores disponibles.</p>
+</ng-template>
