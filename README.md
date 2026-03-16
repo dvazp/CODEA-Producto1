@@ -74,7 +74,7 @@ Para este Producto 1, hemos diseñado la interfaz siguiendo el sistema de rejill
 > Los archivos originales en alta resolución se encuentran en la carpeta `/MockUp Producto 1`.
 
 ## 👥 Equipo: CODEA
-* **Integrantes:** [Alejandro Palomanes Gallego, David Vaz, Eloi Lopez, Oriol Ruiz]
+* **Integrantes:** [Alejandro Palomanes Gallego, David Vaz, Eloi Lopez, Oscar Ruiz]
 * **Asignatura:** Desarrollo de Front-End con frameworks avanzados en entornos moviles (UOC)
 
 
