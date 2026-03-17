@@ -2,6 +2,7 @@ import { Component, signal, inject } from "@angular/core";
 import { ActivatedRoute } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { infoJugadores } from "../common/datos/infoJugadores";
+import { MediaComponent } from '../mediaComponent/mediaComponent';
 
 interface Player {
   nombre: string;
@@ -13,12 +14,13 @@ interface Player {
   rPP: number;
   aPP: number;
   porcentajeTiros: number;
+  img: string;
 }
 
 @Component({
   selector: 'app-detail',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, MediaComponent],
   templateUrl: './detailComponent.html',
   styleUrl: './detailComponent.css'
 })

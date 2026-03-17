@@ -1,14 +1,50 @@
 <main>
     @if (player(); as p) {
-		<h2>{{ p.nombre }}</h2>
-		<p><strong>Equipo:</strong> {{ p.equipo }}</p>
-		<p><strong>Posición:</strong> {{ p.posicion }}</p>
-		<p><strong>Altura:</strong> {{ p.altura }}</p>
-		<p><strong>Edad:</strong> {{ p.edad }}</p>
-		<p><strong>Promedio puntos:</strong> {{ p.pPP }}</p>
-		<p><strong>Promedio rebotes:</strong> {{ p.rPP }}</p>
-		<p><strong>Promedio asistencias:</strong> {{ p.aPP }}</p>
-		<p><strong>% Tiros:</strong> {{ p.porcentajeTiros }}%</p>
+        <div style="display: flex; flex-direction: row; width: 75%; place-self: center;">
+            <div style="display: flex; flex-direction: column; align-items: center; width: max-content; place-self: center;">    
+                <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 10px; align-items: center; width: 100%;">
+                    <img [src]="p.img" [alt]="p.nombre" class="img">
+                    <div class="info-container">
+                        <h2>{{ p.nombre }}</h2>
+                        <p><strong>Equipo:</strong> {{ p.equipo }}</p>
+                        <p><strong>Posición:</strong> {{ p.posicion }}</p>
+                        <p><strong>Altura:</strong> {{ p.altura }}</p>
+                        <p><strong>Edad:</strong> {{ p.edad }}</p>
+                    </div>
+                </div>
+                <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 10px; align-items: center; width: 100%;">
+                    <div class="promedio-container">
+                        <h2>El Míster</h2>
+                        <p><strong>Nombre:</strong> Alex Sabater</p>
+                        <p><strong>Edad:</strong> 33</p>
+                        <p><strong>Ocupación:</strong> Director técnico deportivo</p>
+                        <p><strong>Objetivos:</strong> Acceder a datos de jugadores</p>
+                        <button style="background-color: #7B42F6; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer;"
+                            >Contactar con el agente</button>
+                    </div>
+                    <div class="promedio-container">
+                        <h2 style="color: #e69520;">Promedio de la temporada</h2>
+                        <div class="promedio-row">
+                            <span class="stat-label">Puntos por partido (PPP)</span>
+                            <span class="stat-value">{{ p.pPP }}</span>
+                        </div>
+                        <div class="promedio-row">
+                            <span class="stat-label">Rebotes por partido (RPP)</span>
+                            <span class="stat-value">{{ p.rPP }}</span>
+                        </div>
+                        <div class="promedio-row">
+                            <span class="stat-label">Asistencias por partido (APP)</span>
+                            <span class="stat-value">{{ p.aPP }}</span>
+                        </div>
+                        <div class="promedio-row">
+                            <span class="stat-label">Porcentaje Tiros de Campo (%TC)</span>
+                            <span class="stat-value">{{ p.porcentajeTiros }}%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <app-media></app-media>
+    </div>
     }
     @else {
         <p>Jugador no encontrado.</p>
