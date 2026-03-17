@@ -1,7 +1,7 @@
 import { Component, signal } from "@angular/core";
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
-import { infoJugadores } from "../common/datos/infoJugadores";
+import { infoJugadores } from '../common/datos/infoJugadores';
 import { MediaComponent } from '../mediaComponent/mediaComponent';
 
 @Component({
@@ -13,8 +13,15 @@ import { MediaComponent } from '../mediaComponent/mediaComponent';
 })
 export class PlayersComponent {
   protected readonly title = signal('CODEA-Producto1');
-  // expose the players list to the template
+
   readonly players = infoJugadores;
+
+  selectedPlayer: any = null;
+
+  selectPlayer(player: any): void {
+    this.selectedPlayer = player;
+  }
+
   constructor() {
     console.log('PlayersComponent initialized with title:', this.title());
   }
