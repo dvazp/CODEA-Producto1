@@ -26,5 +26,12 @@ export const infoJugadores = [
         edad: 48, pPP: 23.7, rPP: 10.9, aPP: 2.5, 
         porcentajeTiros: 58.2,
         img: "https://famousink.com/cdn/shop/products/shaq_filnals_mvp_500x_crop_center.jpg?v=1651272244" },
-    
+
+        { nombre: "Tony Parker",
+        equipo: "San Antonio Spurs", 
+        posicion: "Escolta", altura: "1.81m", 
+        edad: 38, pPP: 15.0, rPP: 5.0, aPP: 6.0, 
+        porcentajeTiros: 48.0,
+        img: "https://http2.mlstatic.com/D_NQ_NP_714446-MLM95512452661_102025-O.webp" }
+
 ];

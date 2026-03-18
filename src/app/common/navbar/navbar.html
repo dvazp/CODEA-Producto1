@@ -4,7 +4,46 @@
         </button> -->
         @if (isHome()) {
             <a class="codea-logo" routerLink="/">CODEA Equipo Basket</a>
-        } 
+
+            <div style="display: flex; align-items: center;">
+    <div class="navbar-search">
+        <input
+            type="text"
+            placeholder="Buscar..."
+            [value]="searchText()"
+            (input)="searchText.set($any($event.target).value)"
+        />
+
+            <div class="dropdown">
+                <button class="dropdown-btn">
+                    {{ filterField() | label }}
+                    <span class="arrow">▼</span>
+                </button>
+                <div class="dropdown-content">
+                    <button type="button" (click)="filterField.set('Nombre')">{{ 'Nombre' | label }}</button>
+                    <button type="button" (click)="filterField.set('Equipo')">{{ 'Equipo' | label }}</button>
+                    <button type="button" (click)="filterField.set('Posición')">{{ 'Posición' | label }}</button>
+                    <button type="button" (click)="filterField.set('Edad')">{{ 'Edad' | label }}</button>
+                    <button type="button" (click)="filterField.set('Altura')">{{ 'Altura' | label }}</button>
+                </div>
+            </div>
+    </div>
+    <div class="dropdown">
+        <button class="dropdown-btn">
+            Filtrar
+            <span class="arrow">▼</span>
+        </button>
+        <div class="dropdown-content">
+            <button type="button" (click)="searchText.set('base'); filterField.set('Posición')">Bases</button>
+            <button type="button" (click)="searchText.set('escolta'); filterField.set('Posición')">Escoltas</button>
+            <button type="button" (click)="searchText.set('alero'); filterField.set('Posición')">Aleros</button>
+            <div class="divider"></div>
+            <button type="button" (click)="clearFilters()">Ver todos</button>
+        </div>
+    </div>
+
+</div>
+        }
         @else {
             <a class="nav-item" routerLink="/">Volver al listado</a>
         }
