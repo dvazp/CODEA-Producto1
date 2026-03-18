@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { RouterLink } from '@angular/router';
 
 import { VgCoreModule } from '@videogular/ngx-videogular/core';
 import { VgControlsModule } from '@videogular/ngx-videogular/controls';
@@ -10,7 +9,6 @@ import { VgBufferingModule } from '@videogular/ngx-videogular/buffering';
   selector: 'app-media',
   standalone: true,
   imports: [
-    RouterLink,
     VgCoreModule,
     VgControlsModule,
     VgOverlayPlayModule,

@@ -1,8 +1,8 @@
 <main>
     @if (player(); as p) {
-        <div style="display: flex; flex-direction: row; width: 75%; place-self: center;">
-            <div style="display: flex; flex-direction: column; align-items: center; width: max-content; place-self: center;">    
-                <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 10px; align-items: center; width: 100%;">
+        <div class="main-wrapper">
+            <div class="col-izq">    
+                <div class="grid-row">
                     <img [src]="p.img" [alt]="p.nombre" class="img">
                     <div class="info-container">
                         <h2>{{ p.nombre }}</h2>
@@ -12,14 +12,14 @@
                         <p><strong>Edad:</strong> {{ p.edad }}</p>
                     </div>
                 </div>
-                <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 10px; align-items: center; width: 100%;">
+                <div class="grid-row">
                     <div class="promedio-container">
                         <h2>El Míster</h2>
                         <p><strong>Nombre:</strong> Alex Sabater</p>
                         <p><strong>Edad:</strong> 33</p>
                         <p><strong>Ocupación:</strong> Director técnico deportivo</p>
                         <p><strong>Objetivos:</strong> Acceder a datos de jugadores</p>
-                        <button style="background-color: #7B42F6; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer;"
+                        <button
                             >Contactar con el agente</button>
                     </div>
                     <div class="promedio-container">
@@ -43,7 +43,7 @@
                     </div>
                 </div>
             </div>
-        <app-media></app-media>
+        <app-media class="video-container"></app-media>
     </div>
     }
     @else {
