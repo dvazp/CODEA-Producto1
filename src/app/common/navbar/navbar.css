@@ -1,131 +1,87 @@
-.navbar-general {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #F2F3F4;
-  padding: 0 5vw;
+:root {
+  --codea-purple: #7B42F6;
+  --codea-orange: #e69520;
+  --codea-bg: #F2F3F4;
+}
+
+.navbar-nav .nav-link {
+  color: #7B42F6 !important;
   font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #e69520 !important;
 }
 
 .codea-logo {
   color: #7B42F6;
-  text-underline-offset: 0.5rem;
-  transition: color 0.3s ease, text-underline-offset 0.3s ease;
-}
-
-.codea-logo:hover {
-  text-decoration: underline;
-  text-underline-offset: 0.25rem;
-  color: #e69520;
-}
-
-.navbar-nav {
-  display: flex;
-  flex-direction: row;
-  gap: 20px;
-  place-self: end;
-}
-
-.nav-item {
-  color: #7B42F6;
   text-decoration: none;
-  font-weight: bold;
-  list-style-type: none;
-  transition: color 0.3s ease, text-underline-offset 0.3s ease;
-}
-
-.nav-item:hover {
-  color: #e69520;
-}
-
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-.dropdown-btn {
-  border: none;
-  padding: 8px 16px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  color: #7B42F6;
-  font-weight: bold;
-  font-size: 16px;
-  background-color: transparent;
-  gap: 5px;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #ffffff;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px rgba(0,0,0,0.1);
-  border-radius: 8px;
-  z-index: 10;
-  overflow: hidden;
-}
-
-.dropdown-content button {
-  width: 100%;
-  text-align: left;
-  color: #7B42F6;
-  background: transparent;
-  border: none;
-  padding: 12px 16px;
-  font-size: 14px;
-  font-weight: 600;
-  cursor: pointer;
   transition: color 0.3s ease;
 }
 
-.dropdown-content button:hover {
+.codea-logo:hover {
   color: #e69520;
-  background-color: #f9f9f9;
+  text-decoration: underline;
+  text-underline-offset: 4px;
 }
 
-.dropdown:hover .dropdown-content {
-  display: block;
+/* Contenedor que une el input y el filtro */
+.search-group {
+  border-bottom: 2px solid rgba(123, 66, 246, 0.5);
+  padding-bottom: 2px;
+  transition: border-color 0.3s ease;
 }
 
-.arrow {
-  font-size: 0.7em;
-  transition: transform 0.3s;
+.search-group:focus-within {
+  border-color: #e69520; /* Color naranja al escribir */
 }
 
-.dropdown:hover .arrow {
-  transform: rotate(180deg);
-}
-
-.navbar-search {
-  display: flex;
-  align-items: center;
-  border-bottom: 2px solid rgba(123, 66, 246, 0.6);
-  margin-right: 20px;
-}
-
-.navbar-search input {
-  background-color: transparent;
-  border: none;
-  padding: 8px 12px;
-  color: #7B42F6;
+/* Estilo del Input */
+.custom-search-input {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  color: #7B42F6 !important;
   font-weight: bold;
   font-size: 16px;
-  outline: none;
   width: 150px;
+  padding: 8px 10px;
 }
 
-.navbar-search input::placeholder {
-  color: rgba(123, 66, 246, 0.6);
+.custom-search-input::placeholder {
+  color: rgba(123, 66, 246, 0.5);
 }
 
-.navbar-search input:focus {
-  color: #e69520;
+/* Botón del selector de filtro */
+.filter-selector-btn {
+  border: none !important;
+  color: #7B42F6 !important;
+  font-weight: bold;
+  font-size: 14px;
+  background: transparent !important;
+  padding: 0 10px;
 }
 
-.divider {
-  height: 1px;
-  background-color: #eee;
-  margin: 4px 0;
+.filter-selector-btn:hover {
+  color: #e69520 !important;
+}
+
+/* Estilo de los items del menú */
+.dropdown-item {
+  color: #7B42F6 !important;
+  font-weight: 600;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+.dropdown-item:hover {
+  background-color: #f8f9fa !important;
+  color: #e69520 !important;
+}
+
+/* Eliminar la flecha por defecto de Bootstrap si quieres (opcional) */
+.filter-selector-btn::after {
+  margin-left: 0.5em;
+  vertical-align: 0.255em;
 }
