@@ -1,49 +1,21 @@
-.players-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 16px;
-  margin-top: 20px;
+
+.player-card-hover:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12) !important;
 }
 
-.player-card {
-  background-color: white;
-  border: 2px solid #ddd;
-  border-radius: 10px;
-  padding: 16px;
-  cursor: pointer;
-  transition: 0.2s ease;
+.object-fit-cover {
+  object-fit: cover;
 }
 
-.player-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
-}
-
-.player-card.selected {
-  border-color: #0d6efd;
-  background-color: #eef5ff;
-}
-
-.player-card h3 {
-  margin-top: 0;
-  margin-bottom: 12px;
-}
-
-.player-card p {
-  margin: 6px 0;
-}
-
-.detail-button {
-  display: inline-block;
-  margin-top: 12px;
-  padding: 8px 12px;
-  background-color: #0d6efd;
+.btn-purple {
+  background-color: #7B42F6;
+  border-color: #7B42F6;
   color: white;
-  text-decoration: none;
-  border-radius: 6px;
-  font-weight: 600;
 }
 
-.detail-button:hover {
-  background-color: #0b5ed7;
+.btn-purple:hover {
+  background-color: #59359a;
+  border-color: #59359a;
+  color: white;
 }

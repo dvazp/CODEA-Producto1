@@ -1,38 +1,24 @@
-
+@import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
     /* Iconos video */
 @import '../node_modules/@videogular/ngx-videogular/fonts/videogular.css';
 
 .navbar-brand {
-    /* 1. Fondo blanco */
-    background-color: white !important; /* ¡Usa !important aquí también! */
-    
-    /* 2. Texto violeat (#7c4dff) */
+    background-color: white !important;
     color: #7c4dff !important; 
-    
-    /* 3. > padding */
-    /* Formato: arriba/abajo (10px) y derecha/izquierda (25px) */
     padding: 10px 25px !important; 
-    
-    /* 4. Bordes redondeados y sombra suave */
     border-radius: 8px; 
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Opcional: sombra para que resalte */
-    
-    /* 5. Estructura: Flexbox para alinear perfectamente */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     display: flex;
     align-items: center;
     justify-content: center;
-    
-    /* 6. Separación con los elementos de la derecha */
     margin-right: 30px; 
 }
 
-/* 7. Violeta important! */
 .navbar-brand span.text-primary {
     color: #7c4dff !important;
 }
 
-/* 8. violeta */
 .navbar.bg-dark {
     background-color: #7c4dff !important; 
 }
