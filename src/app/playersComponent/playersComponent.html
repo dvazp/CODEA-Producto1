@@ -5,8 +5,9 @@
        class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 g-4">
     <div class="col" *ngFor="let jugador of players | playerFilter:searchText:filterField">
       <div
+        [routerLink]="['/detail', jugador.nombre]"
         class="card h-100 shadow-sm border-2 player-card-hover"
-        (click)="selectPlayer(jugador)"
+        (click)="$event.stopPropagation()"
         [class.border-primary]="selectedPlayer?.nombre === jugador.nombre"
         [class.bg-primary-subtle]="selectedPlayer?.nombre === jugador.nombre"
         style="cursor: pointer; border-radius: 10px; transition: 0.2s;"
