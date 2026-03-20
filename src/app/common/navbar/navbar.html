@@ -1,63 +1,79 @@
-    <nav class="navbar-general">
-        <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button> -->
-        @if (isHome()) {
-            <a class="codea-logo" routerLink="/">CODEA Equipo Basket</a>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+    <div class="container-fluid">
+    
+    <!-- logo-->
+    <a class="navbar-brand fw-bold" routerLink="/">
+        CODEA Basket Team
+    </a>
 
-            <div style="display: flex; align-items: center;">
-    <div class="navbar-search">
-        <input
-            type="text"
-            placeholder="Buscar..."
+    <!-- burger button -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+        @if (isHome()) {
+        <!-- Filtros -->
+        <div class="d-flex ms-auto align-items-center gap-3">
+
+        <!-- Input + selector -->
+        <div class="input-group">
+            <input 
+            type="text" 
+            class="form-control" 
+            placeholder="Buscar..." 
             [value]="searchText()"
             (input)="searchText.set($any($event.target).value)"
-        />
-
-            <div class="dropdown">
-                <button class="dropdown-btn">
-                    {{ filterField() | label }}
-                    <span class="arrow">▼</span>
-                </button>
-                <div class="dropdown-content">
-                    <button type="button" (click)="filterField.set('Nombre')">{{ 'Nombre' | label }}</button>
-                    <button type="button" (click)="filterField.set('Equipo')">{{ 'Equipo' | label }}</button>
-                    <button type="button" (click)="filterField.set('Posición')">{{ 'Posición' | label }}</button>
-                    <button type="button" (click)="filterField.set('Edad')">{{ 'Edad' | label }}</button>
-                    <button type="button" (click)="filterField.set('Altura')">{{ 'Altura' | label }}</button>
-                </div>
-            </div>
-    </div>
-    <div class="dropdown">
-        <button class="dropdown-btn">
-            Filtrar
-            <span class="arrow">▼</span>
-        </button>
-        <div class="dropdown-content">
-            <button type="button" (click)="searchText.set('base'); filterField.set('Posición')">Bases</button>
-            <button type="button" (click)="searchText.set('escolta'); filterField.set('Posición')">Escoltas</button>
-            <button type="button" (click)="searchText.set('alero'); filterField.set('Posición')">Aleros</button>
-            <div class="divider"></div>
-            <button type="button" (click)="clearFilters()">Ver todos</button>
-        </div>
-    </div>
-
-</div>
-        }
-        @else {
-            <a class="nav-item" routerLink="/">Volver al listado</a>
-        }
-        <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-            <li class="nav-item">
-            <a class="nav-item" routerLink="/">Inicio</a>
-            </li>
-            <li class="nav-item">
-            <a class="nav-item" routerLink="/equipo">Equipo</a>
-            </li>
-            <li class="nav-item">
-            <a class="nav-item" routerLink="/club">Club</a>
-            </li>
+            >
+            
+            <!-- Menu filtros -->
+            <button class="btn btn-outline-light dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            {{ filterField() | label }}
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end">
+            <li><button class="dropdown-item" type="button" (click)="filterField.set('Nombre')">{{ 'Nombre' | label }}</button></li>
+            <li><button class="dropdown-item" type="button" (click)="filterField.set('Equipo')">{{ 'Equipo' | label }}</button></li>
+            <li><button class="dropdown-item" type="button" (click)="filterField.set('Posición')">{{ 'Posición' | label }}</button></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><button class="dropdown-item" type="button" (click)="filterField.set('Edad')">{{ 'Edad' | label }}</button></li>
+            <li><button class="dropdown-item" type="button" (click)="filterField.set('Altura')">{{ 'Altura' | label }}</button></li>
         </ul>
         </div>
-    </nav>
+
+        <!-- Boton filtros -->
+        <div class="dropdown">
+        <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Posiciones
+        </button>
+        <ul class="dropdown-menu">
+            <li><button class="dropdown-item" type="button" (click)="searchText.set('base'); filterField.set('Posición')">Bases</button></li>
+            <li><button class="dropdown-item" type="button" (click)="searchText.set('escolta'); filterField.set('Posición')">Escoltas</button></li>
+            <li><button class="dropdown-item" type="button" (click)="searchText.set('alero'); filterField.set('Posición')">Aleros</button></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><button class="dropdown-item text-danger" type="button" (click)="clearFilters()">Ver todos</button></li>
+        </ul>
+        </div>
+
+        </div>
+}
+    @else {
+    <!-- Back to home -->
+    <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+        <a class="nav-link active fw-bold" routerLink="/">
+            <i class="bi bi-arrow-left"></i> Volver al listado
+        </a>
+        </li>
+    </ul>
+    }
+
+    <!-- Links navegación gral. -->
+    <ul class="navbar-nav ms-3 border-start ps-3">
+    <li class="nav-item"><a class="nav-link" routerLink="/">Inicio</a></li>
+    <li class="nav-item"><a class="nav-link" routerLink="/equipo">Equipo</a></li>
+    <li class="nav-item"><a class="nav-link" routerLink="/club">Club</a></li>
+    </ul>
+
+</div>
+</div>
+</nav>
