@@ -1,110 +1,51 @@
-.main-wrapper {
-  display: flex;
-  gap: 20px;
-  width: 90%;
-  margin: 0 auto;
-  align-items: start;
-}
-
-.col-izq {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  flex: 3;
-}
-
-.grid-row {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: 10px;
-}
-
-.img {
-  width: auto;
-  height: 30vh;
+.custom-card {
   border-radius: 10px;
+  border-color: #7B42F6;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
 }
 
-.info-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    border-radius: 10px;
-    background-color: #cfcfcf;
-    padding-left: 3vw;
-    padding-right: 3vw;
-    height: 30vh;
-    width: max;
-}
-.promedio-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    border-radius: 10px;
-    background-color: #cfcfcf;
-    padding: 1vw 3vh;
-    height: 90%;
-    width: max;
-}
-.mister-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    border-radius: 10px;
-    background-color: #cfcfcf;
-    padding: 1vw 3vh;
-    height: 90%;
-    width: max-content;
-}
-p {
-  margin: 8px 0;
+.custom-card:hover {
+  transform: scale(1.01);
 }
 
-.promedio-row{
+.custom-height-img {
+  height: 30vh;
+  
+}
+.stat-row {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 20px;
-  border-bottom: 1px solid #f0f0f0;
-}
-.promedio-row:last-child {
-  border-bottom: none;
+  padding: 12px 0;
+  border-bottom: 1px solid #e0e0e0;
 }
 
-.stat-label {
-  font-weight: 500;
-  margin-right: 10px;
-}
-.stat-value {
+.stat-badge {
   background-color: #7B42F6;
   color: white;
-  padding: 3px 5px;
+  padding: 4px 10px;
   border-radius: 6px;
   font-weight: bold;
-  min-width: 40px;
+  min-width: 45px;
   text-align: center;
 }
 
-button {
-  padding: 10px 10px;
-  height: max-content;
-  width: max-content;
-  place-self: center;
-  border-radius: 5px;
+.btn-custom {
   background-color: #7B42F6;
-  border: none;
   color: white;
   font-weight: bold;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  border: none;
+  padding: 10px 20px;
+  transition: all 0.3s ease;
 }
 
-button:hover {
+.btn-custom:hover {
   background-color: #e69520;
+  color: white;
+  transform: translateY(-2px);
 }
 
-.video-container {
-  border-radius: 10px;
-  overflow: hidden;
-  max-width: 40%;
+app-media {
+  max-width: 100%;
 }
