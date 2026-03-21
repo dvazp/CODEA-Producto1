@@ -1,5 +1,9 @@
 {
   "name": "codea-producto1",
+  "installConfig": {
+    "hoistingLimits": "workspaces",
+    "legacy-peer-deps": true
+  },
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
