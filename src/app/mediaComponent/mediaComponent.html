@@ -1,7 +1,6 @@
 <div class="videos-container">
   <div *ngFor="let jugador of (player ? [player] : jugadores)" class="player-video-section">
     <div *ngIf="getVideoForPlayer(jugador.nombre) as video" class="video-item">
-      <h3>{{ jugador.nombre }}</h3>
       <div class="video-container">
         <vg-player>
           <vg-overlay-play></vg-overlay-play>
